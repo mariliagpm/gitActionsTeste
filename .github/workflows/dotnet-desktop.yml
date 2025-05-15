@@ -44,9 +44,10 @@ jobs:
           path: dir.zip
           if-no-files-found: error
           retention-days: 20   
-      - name: Artifact URL
-        run: url=$(curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${GITHUB_TOKEN}" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts | jq ".artifacts[] | select(.workflow_run.id==${GITHUB_RUN_ID}).url" | tr -d '"')/zip; curl -s -I -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${GITHUB_TOKEN}" -H "X-GitHub-Api-Version: 2022-11-28" $url | grep location | cut -d " " -f 2
-          echo "{{url}}"
+      - name: Extract Artifact URL
+        run: |
+          echo "Artifact URL is: ${{ steps.allure-results2.outputs.artifact-url }}"
+
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
         if: always()
