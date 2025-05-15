@@ -18,18 +18,6 @@ jobs:
           dotnet-version: 8.0.x
       - name: Test 
         run: dotnet test
-        
-        
-  report:
-    needs: test
-  
-    runs-on: ubuntu-latest
-  
-    steps:
-      - name: Zip Allure    
-        uses: montudor/action-zip@v1
-        with:
-          args: zip -qq -r  dir.zip . -i .\bin\Debug\net8.0\allure-results
       - name: Upload Allure Results
         uses: actions/upload-artifact@v4.0.0
         id: allure-results
@@ -41,7 +29,20 @@ jobs:
         env: 
             GITHUB_TOKEN: ${{ github.token }} 
             MYID: ${{ steps.allure-results.outputs.artifact-id }}
-            MYURL: ${{ steps.allure-results.outputs.artifact-url }}        
+            MYURL: ${{ steps.allure-results.outputs.artifact-url }}      
+      - name: Output artifact URL test1
+        run:  echo 'Allure report can be download on ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.allure-results.outputs.artifact-id }}'
+   
+  report:
+    needs: test
+  
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Zip Allure    
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r  dir.zip . -i .\bin\Debug\net8.0\allure-results
       - name:  Upload Allure Results to zip
         uses: actions/upload-artifact@v4.0.0
         id: allure-results2
