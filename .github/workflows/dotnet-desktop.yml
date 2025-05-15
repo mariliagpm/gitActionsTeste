@@ -25,8 +25,7 @@ jobs:
           path: .\bin\Debug\net8.0\allure-results
           if-no-files-found: error
           retention-days: 20
-<<<<<<< HEAD
-       
+ 
         
   report:
     needs: test
@@ -34,13 +33,10 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
-       - name: Zip Allure   
-=======
-      - name: Zip Allure   
->>>>>>> 96c1f8fd1a54ac12e522f8265bba487c47d9cc82
+      - name: Zip Allure    
         uses: montudor/action-zip@v1
         with:
-         args: zip -qq -r dir.zip .\bin\Debug\net8.0\allure-results
+          args: zip -qq -r dir.zip .\bin\Debug\net8.0\allure-results
       - name:  Upload Allure Results to zip
         uses: actions/upload-artifact@v4.0.0
         with:
