@@ -10,9 +10,9 @@ namespace roomstogoseleniumframework.tests
         [Test, Category("Regression")]
         public void TestGetSwiperItems()
         {
-
-            ClassicAssert.AreEqual(driver.Value.Title, "Google");
             Console.WriteLine(driver.Value.Title);
+            ClassicAssert.AreEqual(driver.Value.Title, "Google");
+            
 
         }
 
