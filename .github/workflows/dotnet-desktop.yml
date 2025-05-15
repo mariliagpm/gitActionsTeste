@@ -50,22 +50,29 @@ jobs:
           ref: gh-pages
           path: gh-pages
   
-      - name: Generate report
-        uses: andgineer/allure-report@v3.6
+      - name: Load Allure test report history
+        uses: actions/checkout@v4
         if: always()
-        id: allure-report
+        continue-on-error: true
         with:
-          allure_results: allure-results
+          ref: gh-pages
+          path: gh-pages-dir
+
+    - name: Generate Allure test report
+        uses: andgineer/allure-report@v3.5
+        id: allure-report
+        if: always()
+        with:
+          allure-results: allure-results
           website: gh-pages-dir
           reports-site-path: builds/tests
-          keep_reports: 20
-  
-      - name: Deploy report to Github Pages
-        if: always()
-        # uses: peaceiris/actions-github-pages@v3.1.12
-        uses: peaceiris/actions-gh-pages@v3.9.3
-        with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_branch: gh-pages
-            publish_dir: ${{ steps.allure-report.outputs.reports-site }}
-            destination_dir: ${{ steps.allure-report.outputs.reports-site-path }}
+          report-page: behaviors
+
+    - name: Publish Allure test report
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ always() && (steps.allure-report.outcome == 'success') }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ${{ steps.allure-report.outputs.reports-site }}
+        destination_dir: ${{ steps.allure-report.outputs.reports-site-path }}
