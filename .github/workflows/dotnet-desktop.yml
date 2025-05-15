@@ -43,9 +43,9 @@ jobs:
           name: allure-results2
           path: dir.zip
           if-no-files-found: error
-          retention-days: 20 
-      - name: Download Azure
-        run: echo ${{ steps.allure-report.outputs.reports-site-path }}
+          retention-days: 20   
+      - name: Artifact URL
+        run: echo "::set-output name=artifact_url::https://github.com/$GITHUB_REPOSITORY/suites/$GITHUB_RUN_ID/artifacts/allure-results2"
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
         if: always()
