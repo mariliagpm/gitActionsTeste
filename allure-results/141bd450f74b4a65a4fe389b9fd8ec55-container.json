@@ -1,8 +1,8 @@
 {
-  "uuid": "0362a7ce-97db-4da0-9c02-e4a1a7c680b2-tc-0-1000",
+  "uuid": "c15e028b-8416-449e-9170-44cd39fe41e8-tc-0-1000",
   "name": "roomstogoseleniumframework.tests.RoomsToGoLogin.TestGetSwiperItems",
   "children": [
-    "44b12288-dbfd-4e24-95f5-d4e447afb942-tr-0-1001"
+    "b0913d5b-23a1-474e-a86e-76ca41374a4c-tr-0-1001"
   ],
   "befores": [
     {
@@ -17,8 +17,8 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1747325747174,
-      "stop": 1747325747174
+      "start": 1747329260701,
+      "stop": 1747329260701
     },
     {
       "name": "StartBrowser",
@@ -32,8 +32,8 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1747325747175,
-      "stop": 1747325747175
+      "start": 1747329260702,
+      "stop": 1747329260702
     }
   ],
   "afters": [
@@ -49,8 +49,8 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1747325747175,
-      "stop": 1747325747175
+      "start": 1747329260702,
+      "stop": 1747329260702
     },
     {
       "name": "TearDown",
@@ -66,11 +66,11 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1747325747175,
-      "stop": 1747325747175
+      "start": 1747329260702,
+      "stop": 1747329260702
     }
   ],
   "links": [],
-  "start": 1747325698965,
-  "stop": 1747325747192
+  "start": 1747329202225,
+  "stop": 1747329260720
 }
