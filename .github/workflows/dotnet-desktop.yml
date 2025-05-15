@@ -46,7 +46,7 @@ jobs:
           retention-days: 20
           env-url: AZURE
       - name: Download Azure
-        run: echo "${{env.AZURE}}" 
+        run: echo ${{ steps.allure-report.outputs.reports-site-path }}
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
         if: always()
