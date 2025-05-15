@@ -51,17 +51,17 @@ jobs:
         continue-on-error: true
         with:
           ref: gh-pages
-          path: gh-pages-dir
+          path: gh-pages
 
       - name: Generate Allure test report
-        uses: andgineer/allure-report@v3.5
+        uses: simple-elf/allure-report-action@master
         id: allure-report
         if: always()
         with:
-          allure-results: allure-results
-          website: gh-pages-dir
-          reports-site-path: builds/tests
-          report-page: behaviors
+          allure_results: allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_history: allure-history
 
       - name: Publish Allure test report
         uses: peaceiris/actions-gh-pages@v3
