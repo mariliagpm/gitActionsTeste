@@ -58,7 +58,7 @@ jobs:
           ref: gh-pages
           path: gh-pages-dir
 
-    - name: Generate Allure test report
+      - name: Generate Allure test report
         uses: andgineer/allure-report@v3.5
         id: allure-report
         if: always()
@@ -68,11 +68,11 @@ jobs:
           reports-site-path: builds/tests
           report-page: behaviors
 
-    - name: Publish Allure test report
-      uses: peaceiris/actions-gh-pages@v3
-      if: ${{ always() && (steps.allure-report.outcome == 'success') }}
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: ${{ steps.allure-report.outputs.reports-site }}
-        destination_dir: ${{ steps.allure-report.outputs.reports-site-path }}
+      - name: Publish Allure test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ always() && (steps.allure-report.outcome == 'success') }}
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_branch: gh-pages
+         publish_dir: ${{ steps.allure-report.outputs.reports-site }}
+         destination_dir: ${{ steps.allure-report.outputs.reports-site-path }}
