@@ -1,0 +1,69 @@
+{
+  "uuid": "44b12288-dbfd-4e24-95f5-d4e447afb942-tr-0-1001",
+  "historyId": "roomstogoseleniumframework.tests.RoomsToGoLogin.TestGetSwiperItems",
+  "fullName": "roomstogoseleniumframework.tests.RoomsToGoLogin.TestGetSwiperItems",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NUnit.Fw.NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "fv-az1797-289"
+    },
+    {
+      "name": "package",
+      "value": "roomstogoseleniumframework.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestGetSwiperItems"
+    },
+    {
+      "name": "testClass",
+      "value": "RoomsToGoLogin"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    }
+  ],
+  "links": [],
+  "name": "TestGetSwiperItems",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestGetSwiperItems"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestGetSwiperItems",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": ""
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "121a2896ba154cf9af2d4bac56ab5f0d-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1747325698968,
+      "stop": 1747325747176
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747325698967,
+  "stop": 1747325747178
+}
