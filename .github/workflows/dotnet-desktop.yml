@@ -39,6 +39,7 @@ jobs:
           args: zip -qq -r dir.zip . -i .\bin\Debug\net8.0\allure-results
       - name:  Upload Allure Results to zip
         uses: actions/upload-artifact@v4.0.0
+        id: artifact-upload-step
         with:
           name: allure-results2
           path: dir.zip
