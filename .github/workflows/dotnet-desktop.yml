@@ -25,11 +25,6 @@ jobs:
           path: .\bin\Debug\net8.0\allure-results
           if-no-files-found: error
           retention-days: 20
-      
-      - name: Clean up gh-pages branch (optional)
-        run: |
-          git checkout -f gh-pages
-          git rm -rf .
   report:
     needs: test
   
