@@ -36,7 +36,7 @@ jobs:
       - name: Zip Allure    
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r dir.zip .\bin\Debug\net8.0\allure-results
+          args: zip -qq -r dir.zip . -i .\bin\Debug\net8.0\allure-results
       - name:  Upload Allure Results to zip
         uses: actions/upload-artifact@v4.0.0
         with:
