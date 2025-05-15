@@ -45,9 +45,12 @@ jobs:
           path: dir.zip
           if-no-files-found: error
           retention-days: 20    
+        env: 
+            GITHUB_TOKEN: ${{ github.token }} 
+            MYID: ${{ steps.artifact-upload-step.outputs.artifact-id }}
+            MYURL: ${{ steps.artifact-upload-step.outputs.artifact-url }}  
       - name: Extract Artifact URL
-        run: |
-          echo "Artifact URL is: ${{ steps.allure-results2.outputs.artifact-url }}"
+         run:  echo 'Artifact URL is ${{ env.MYURL }}'
  
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
