@@ -36,19 +36,19 @@ jobs:
       - name: Zip Allure    
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r dir.zip . -i .\bin\Debug\net8.0\allure-results
+          args: zip -qq -r D:\dir.zip . -i .\bin\Debug\net8.0\allure-results
       - name:  Upload Allure Results to zip
         uses: actions/upload-artifact@v4.0.0
-        id: artifact-upload-step
+        id: allure-results2
         with:
           name: allure-results2
-          path: dir.zip
+          path: D:\dir.zip
           if-no-files-found: error
           retention-days: 20    
         env: 
             GITHUB_TOKEN: ${{ github.token }} 
-            MYID: ${{ steps.artifact-upload-step.outputs.artifact-id }}
-            MYURL: ${{ steps.artifact-upload-step.outputs.artifact-url }}  
+            MYID: ${{ steps.allure-results2.outputs.artifact-id }}
+            MYURL: ${{ steps.allure-results2.outputs.artifact-url }}  
       - name: Extract Artifact URL
          run:  echo 'Artifact URL is ${{ env.MYURL }}'
  
