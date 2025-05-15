@@ -35,8 +35,7 @@ jobs:
   
     runs-on: ubuntu-latest
   
-    steps:
-     
+    steps: 
   
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
@@ -72,8 +71,3 @@ jobs:
          publish_branch: gh-pages
          publish_dir: ${{ steps.allure-report.outputs.reports-site }}
          destination_dir: ${{ steps.allure-report.outputs.reports-site-path }}
-      - name: Download Build Artifact
-        uses: actions/download-artifact@v4.1.0
-        with:
-          name: allure-results
-          path: ./allure-results
