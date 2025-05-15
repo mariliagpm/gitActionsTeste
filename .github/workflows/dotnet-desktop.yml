@@ -44,9 +44,9 @@ jobs:
           path: dir.zip
           if-no-files-found: error
           retention-days: 20
-          env-url: azureurl
-      - name: Download Build Artifact
-        run: echo "${{env.azureurl}}" 
+          env-url: AZURE
+      - name: Download Azure
+        run: echo "${{env.AZURE}}" 
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
         if: always()
@@ -81,8 +81,4 @@ jobs:
          publish_branch: gh-pages
          publish_dir: ${{ steps.allure-report.outputs.reports-site }} 
          destination_dir: ${{ steps.allure-report.outputs.reports-site-path }}
-      - name: Download re
-        uses: actions/download-artifact@v4.1.0
-        with:
-              name: allure-report
-              path: ${{ steps.allure-report.outputs.reports-site-path }} 
+     
