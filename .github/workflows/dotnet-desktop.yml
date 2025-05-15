@@ -51,7 +51,8 @@ jobs:
             MYURL: ${{ steps.allure-results2.outputs.artifact-url }}  
       - name: Extract Artifact URL
         run: echo 'Artifact URL is ${{ env.MYURL }}'
- 
+      - name: Output artifact URL test1
+        run:  echo 'Artifact URL is ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.allure-results2.outputs.artifact-url }}'
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
         if: always()
