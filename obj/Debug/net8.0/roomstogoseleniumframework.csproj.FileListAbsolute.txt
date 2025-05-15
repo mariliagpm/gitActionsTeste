@@ -396,3 +396,7 @@ C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-
 C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\obj\Debug\net8.0\roomstogoseleniumframework.sourcelink.json
+C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\bin\Debug\net8.0\Allure.Commons.dll
+C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\bin\Debug\net8.0\AspectInjector.Broker.dll
+C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\bin\Debug\net8.0\MimeTypesMap.dll
+C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\bin\Debug\net8.0\NUnit.Allure.dll
