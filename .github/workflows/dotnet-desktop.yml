@@ -43,11 +43,11 @@ jobs:
           name: allure-results2
           path: dir.zip
           if-no-files-found: error
-          retention-days: 20   
+          retention-days: 20    
       - name: Extract Artifact URL
         run: |
           echo "Artifact URL is: ${{ steps.allure-results2.outputs.artifact-url }}"
-
+ 
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
         if: always()
