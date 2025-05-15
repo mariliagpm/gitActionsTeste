@@ -43,8 +43,7 @@ jobs:
           name: allure-results2
           path: dir.zip
           if-no-files-found: error
-          retention-days: 20
-          env-url: AZURE
+          retention-days: 20 
       - name: Download Azure
         run: echo ${{ steps.allure-report.outputs.reports-site-path }}
       - name: Get Allure history (optional)
