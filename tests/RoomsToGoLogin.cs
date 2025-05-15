@@ -12,7 +12,7 @@ namespace roomstogoseleniumframework.tests
         {
 
             ClassicAssert.AreEqual(driver.Value.Title, "Google");
-
+            Console.WriteLine(driver.Value.Title);
 
         }
 
