@@ -25,7 +25,15 @@ jobs:
           path: .\bin\Debug\net8.0\allure-results
           if-no-files-found: error
           retention-days: 20
-       -name: Zip Allure   
+       
+        
+  report:
+    needs: test
+  
+    runs-on: ubuntu-latest
+  
+    steps:
+       - name: Zip Allure   
         uses: montudor/action-zip@v1
         with:
         args: zip -qq -r dir.zip .\bin\Debug\net8.0\allure-results
@@ -37,13 +45,6 @@ jobs:
           path: .\bin\Debug\net8.0\allure-results\dir.zip
           if-no-files-found: error
           retention-days: 20
-        
-  report:
-    needs: test
-  
-    runs-on: ubuntu-latest
-  
-    steps:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4.1.0
         with:
