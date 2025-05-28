@@ -195,10 +195,10 @@ namespace roomstogoseleniumframework.Utilities
                      
                     break;
                 case TestStatus.Passed:
-                    test.Pass("Test Passed");
+                    
                     break;
                 default:
-                    test.Info("Test Finished with no specific status.");
+             
                     break;
             }
 
