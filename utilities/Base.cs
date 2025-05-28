@@ -21,16 +21,13 @@ namespace roomstogoseleniumframework.Utilities
     {
         public ThreadLocal<IWebDriver> driver = new();
         protected WebDriverWait wait;
-        private static ExtentReports extent;
-        protected ExtentTest test;
+       
 
         
 
         [SetUp]
         public void StartBrowser()
-        {
-            // Start the ExtentTest for the current test
-            test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
+        { 
 
             string browserName = TestContext.Parameters["browserName"];
             if (string.IsNullOrEmpty(browserName))
