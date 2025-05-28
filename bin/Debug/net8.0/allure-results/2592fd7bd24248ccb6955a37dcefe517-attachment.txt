@@ -1,0 +1,2 @@
+Google
+Error capturing screenshot: Access to the path 'C:\screenshotsTestGetSwiperItems_screenshot_638840326226332331.png' is denied.

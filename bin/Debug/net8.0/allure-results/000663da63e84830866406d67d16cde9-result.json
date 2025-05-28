@@ -1,0 +1,73 @@
+{
+  "uuid": "e05ae25b-2cc7-44cb-b031-150e8b6a8f31-tr-0-1003",
+  "historyId": "roomstogoseleniumframework.tests.TestClass.TestGetSwiperItems",
+  "fullName": "roomstogoseleniumframework.tests.TestClass.TestGetSwiperItems",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NUnit.Fw.NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-7643FTPL"
+    },
+    {
+      "name": "package",
+      "value": "roomstogoseleniumframework.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestGetSwiperItems"
+    },
+    {
+      "name": "testClass",
+      "value": "TestClass"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "tag",
+      "value": "Regression2"
+    }
+  ],
+  "links": [],
+  "name": "TestGetSwiperItems",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestGetSwiperItems"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestGetSwiperItems",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": ""
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "7fd01fbfab5049c4847ae0089d10db62-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748448479026,
+      "stop": 1748448507886
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748448479026,
+  "stop": 1748448507890
+}

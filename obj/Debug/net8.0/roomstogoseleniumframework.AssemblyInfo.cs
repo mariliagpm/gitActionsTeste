@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("roomstogoseleniumframework")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e2585e38255d8bc3482a1f9fb7cae9b0b63c2cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("roomstogoseleniumframework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("roomstogoseleniumframework")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

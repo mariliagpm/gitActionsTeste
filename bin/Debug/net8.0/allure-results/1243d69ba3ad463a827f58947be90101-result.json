@@ -1,0 +1,95 @@
+{
+  "uuid": "903dcf68-8e1a-484c-882e-f07fc393d347-tr-0-1001",
+  "historyId": "roomstogoseleniumframework.tests.TestClass.TestGetSwiperItems",
+  "fullName": "roomstogoseleniumframework.tests.TestClass.TestGetSwiperItems",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NUnit.Fw.NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-7643FTPL"
+    },
+    {
+      "name": "package",
+      "value": "roomstogoseleniumframework.tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestGetSwiperItems"
+    },
+    {
+      "name": "testClass",
+      "value": "TestClass"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "tag",
+      "value": "Regression2"
+    }
+  ],
+  "links": [],
+  "name": "TestGetSwiperItems",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestGetSwiperItems"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestGetSwiperItems",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": ""
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "test",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [
+            {
+              "name": "TestGetSwiperItems_screenshot_638840353989260819.png",
+              "source": "910bb5ec4c6344b1b728aa067e4dd69a-attachment.png",
+              "type": "image/png"
+            }
+          ],
+          "parameters": [],
+          "start": 1748449398772,
+          "stop": 1748449398961
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "6a76ee100a7043268bb3e71737b06a71-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748449373034,
+      "stop": 1748449399453
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748449373034,
+  "stop": 1748449399457
+}

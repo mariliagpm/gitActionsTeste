@@ -1,0 +1,2 @@
+Google
+Error capturing screenshot: Access to the path 'C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\bin\Debug\net8.0\screenshots' is denied.

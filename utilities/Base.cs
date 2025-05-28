@@ -12,6 +12,8 @@ using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using WebDriverManager.DriverConfigs.Impl;
 using NUnit.Framework.Interfaces;
+using Allure.Commons;
+using Status = Allure.Commons.Status;
 
 namespace roomstogoseleniumframework.Utilities
 {
@@ -22,25 +24,7 @@ namespace roomstogoseleniumframework.Utilities
         private static ExtentReports extent;
         protected ExtentTest test;
 
-        [OneTimeSetUp]
-        public void SetUp()
-        {
-            // Set up ExtentReports
-            String workingDirectory = Environment.CurrentDirectory;
-
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            string reportPath = projectDirectory + "//index.html";
-                //Path.Combine(projectDirectory, "index.html");
-
-            var htmlReporter = new ExtentSparkReporter(reportPath);
-            extent = new ExtentReports();
-            extent.AttachReporter(htmlReporter);
-            extent.AddSystemInfo("Host Name", "localhost");
-            extent.AddSystemInfo("Environment", "QA");
-            htmlReporter.Config.DocumentTitle = "Automation Test Report";
-            htmlReporter.Config.ReportName = "Rooms To Go Test Report";
-            htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Config.Theme.Dark;
-        }
+        
 
         [SetUp]
         public void StartBrowser()
@@ -68,6 +52,7 @@ namespace roomstogoseleniumframework.Utilities
                 driver.Value.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
                 driver.Value.Manage().Window.Maximize();
                 driver.Value.Navigate().GoToUrl(baseUrl);
+                
 
                 wait = new WebDriverWait(driver.Value, TimeSpan.FromSeconds(20));
             }
@@ -190,11 +175,7 @@ namespace roomstogoseleniumframework.Utilities
                 }
             }
         }
-
-        public static JsonReader getDataParser()
-        {
-            return new JsonReader();
-        }
+         
 
         [TearDown]
         public void AfterTest()
@@ -211,14 +192,10 @@ namespace roomstogoseleniumframework.Utilities
             switch (status)
             {
                 case TestStatus.Failed:
-                    // Capture screenshot on failure
-                    test.Fail("Test Failed", CaptureScreenshot(driver.Value, fileName))
-                        .Log(Status.Fail, errorMessage)
-                        .Log(Status.Fail, stacktrace);
-
+                    CaptureScreenshot(driver.Value);
                     break;
                 case TestStatus.Skipped:
-                    test.Skip("Test Skipped").Log(Status.Skip, errorMessage);
+                     
                     break;
                 case TestStatus.Passed:
                     test.Pass("Test Passed");
@@ -236,26 +213,27 @@ namespace roomstogoseleniumframework.Utilities
             }
         }
 
-        public AventStack.ExtentReports.Model.Media CaptureScreenshot(IWebDriver driver, String screenshotName)
+        public void CaptureScreenshot(IWebDriver driver)
         {
             try
-            {
-                ITakesScreenshot ts = (ITakesScreenshot)driver;
-                var screenshot = ts.GetScreenshot().AsBase64EncodedString;
-                return MediaEntityBuilder.CreateScreenCaptureFromBase64String(screenshot, screenshotName).Build();
+            { 
+
+                var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                var filename = TestContext.CurrentContext.Test.MethodName + "_screenshot_" + DateTime.Now.Ticks + ".png";
+                var path = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory) + "/screenshots/"+ filename;
+                screenshot.SaveAsFile(path);
+                TestContext.AddTestAttachment(path);
+                AllureLifecycle.Instance.AddAttachment(filename, "image/png", path);
+
+                 
+                 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error capturing screenshot: " + ex.Message);
-                return null;
+              
             }
         }
-
-        [OneTimeTearDown]
-        public void TearDown()
-        {
-            // Flush the report
-            extent.Flush();
-        }
+ 
     }
 }

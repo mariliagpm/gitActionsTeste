@@ -1,0 +1,76 @@
+{
+  "uuid": "579151dd-ec6b-4ddd-b533-6b5113c9ea60-tc-0-1002",
+  "name": "roomstogoseleniumframework.tests.TestClass.TestGetSwiperItems",
+  "children": [
+    "b4da5854-5a78-4e6b-bebc-c3b1a7c6de5a-tr-0-1003"
+  ],
+  "befores": [
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1748447376841,
+      "stop": 1748447376841
+    },
+    {
+      "name": "StartBrowser",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1748447376841,
+      "stop": 1748447376841
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1748447376841,
+      "stop": 1748447376841
+    },
+    {
+      "name": "TearDown",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1748447376841,
+      "stop": 1748447376841
+    }
+  ],
+  "links": [],
+  "start": 1748447361823,
+  "stop": 1748447376871
+}

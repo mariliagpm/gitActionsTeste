@@ -1,0 +1,2 @@
+Google
+Error capturing screenshot: Could not find a part of the path 'C:\Users\maril\Downloads\SeleniumC-NunitFramework-main\SeleniumC-NunitFramework-main\roomstogoseleniumframework\bin\Debug\net8.0\System.Func`2[System.String,System.String]\screenshots'.
