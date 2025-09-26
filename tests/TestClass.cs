@@ -25,7 +25,10 @@ namespace roomstogoseleniumframework.tests
             Console.WriteLine(driver.Value.Title);
             Assert.That(driver.Value.Title, Is.EqualTo("Google"));
             CaptureScreenshot(driver.Value);
+             Console.WriteLine(driver.Value.Title);
         }
+
+
 
         
 
